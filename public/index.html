@@ -1,28 +1,149 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="drivy.css" />
     <title>CSS/HTML Workshop with Drivy</title>
+
+
   </head>
   <body>
-    <div id="car">
-      <input class="model" type="text" placeholder="Car model"/>
-      <input class="price-by-day" type="number" placeholder="Price by day"/>
-      <input class="price-by-km" type="number" placeholder="Price by km"/>
+
+<form>
+
+  <ul id="dropdown1" class="dropdown-content">
+    <li><a href="#!">Log in</a></li>
+    <li class="divider"></li>
+    <li><a href="#!">Sign out</a></li>
+  </ul>
+
+  <nav>
+    <div class="nav-wrapper">
+      <a href="index.html" class="brand-logo"</a>
+      <img src="logo.png">
+
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#">About Drivy</a></li>
+          <li><a href="#">Our car models</a></li>
+          <li><a href="#">Join us</a></li>
+        </ul>
+
+        <ul class="side-nav" id="mobile-demo">
+          <li><a href="#">About Drivy</a></li>
+          <li><a href="#">Our car models</a></li>
+          <li><a href="#">Join us</a></li>
+        </ul>
     </div>
-    <div id="rental">
-      <input class="begin" type="date" placeholder="Rental begin date"/>
-      <input class="end" type="date" placeholder="Rental end date"/>
-      <input class="distance" type="number" placeholder="Distance in km"/>
-      <input class="option" type="checkbox" placeholder="Deductible option"/>
+  </nav>
+
+
+
+<div class="container">
+<div id="car">
+
+  <div class="row">
+
+<h3 class="header center-on-small-only">Welcome to Drivy!</h3>
+    <form class="col s12">
+
+        <div class="input-field col s6">
+
+          <input id="car_model"class="model" type="text" />
+          <label for="car_model">Car model</label>
+        </div>
+      </div>
+        </div>
+
+
+      <div class="row">
+        <div class="input-field col s3">
+          <div id="car">
+          <input id="price-by-day" type="number" class="price-by-day">
+          <label for="price-by-day">Price by day</label>
+        </div>
+      </div>
+
+        <div class="input-field col s3">
+          <div id="car">
+          <input id="price-by-km" type="number" class="price-by-km">
+          <label for="price-by-km">Price by km</label>
+        </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s3">
+          <div id="rental">
+          <input id="begin" type="date" class="begin">
+        </div>
+      </div>
+
+        <div class="input-field col s3">
+          <div id="rental">
+          <input id="end" type="date" class="end">
+        </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <form class="col s12">
+          <div class="input-field col s6">
+            <center>
+            <input id="distance" type="number" class="distance">
+            <label for="distance">Distance in km</label></center>
+
+
+          </div>
+
+      </div>
+
+      <p>
+
+
+        <input class="option" type="checkbox" id="option" />
+        <label for="option">Option</label>
+
+
+    </p>
     </div>
-    <button id="compute">Compute</button>
+    </div>
+    </div>
+  </form>
+  </div>
+  <div class="container">
+
+  <button class="btn waves-effect waves-light" type="submit" name="action" id="compute">Compute</button>
+</div>
+
+
+
+
+
+<br/>
+<br/>
+
     <div id="actors"></div>
+
     <script id="template" type="x-tmpl-mustache">
       {{#actors}}
+      <div class="container">
         <div class="actor">
+
+        <div class="row">
+          <form class="col s12">
+
           <span>{{who}}</span>
           <span>{{type}}</span>
           <span>{{amount}}</span>
+
+        </div>
+        </form>
+        </div>
         </div>
       {{/actors}}
     </script>
